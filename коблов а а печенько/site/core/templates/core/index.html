@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добро пожаловать</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 40px; }
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a.button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать!</h1>
+    {% if user.is_authenticated %}
+        <p>Вы вошли как {{ user.username }}.</p>
+        <a class="button" href="{% url 'order_certificate' %}">Заказать справку</a>
+        <a class="button" href="{% url 'logout' %}">Выйти</a>
+    {% else %}
+        <a class="button" href="{% url 'register' %}">Регистрация</a>
+        <a class="button" href="{% url 'login' %}">Вход</a>
+    {% endif %}
+</body>
+</html>
