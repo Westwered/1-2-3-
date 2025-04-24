@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добро пожаловать</title>
+    <link rel="stylesheet" href="{% static 'core/index.css' %}">
+</head>
+<body>
+    <div class="terminal-box">
+        <h1 class="neon-title">⛓ Добро пожаловать в Систему ⛓</h1>
+        {% if user.is_authenticated %}
+            <p class="neon-text">🧠 Пользователь: <strong>{{ user.username }}</strong></p>
+            <div class="btn-group">
+                <a class="cyber-button" href="{% url 'order_certificate' %}">📄 Заказать справку</a>
+                <a class="cyber-button danger" href="{% url 'logout' %}">⏻ Выйти</a>
+            </div>
+        {% else %}
+            <div class="btn-group">
+                <a class="cyber-button" href="{% url 'register' %}">🛠 Регистрация</a>
+                <a class="cyber-button" href="{% url 'login' %}">🔐 Вход</a>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+body {
+    background-color: #0e0e0e;
+    margin: 0; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    overflow: hidden; 
+}
+
+.terminal-box {
+    background: #1a1a1a;
+    border: 1px solid #00f7ff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 247, 255, 0.4);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.neon-title {
+    color: #00f7ff;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 5px #00f7ff;
+}
+
+.neon-text {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.cyber-button {
+    text-decoration: none;
+    background-color: transparent;
+    color: #00f7ff;
+    border: 2px solid #00f7ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cyber-button:hover {
+    background-color: #00f7ff;
+    color: #000;
+    box-shadow: 0 0 15px #00f7ff;
+}
+
+.cyber-button.danger {
+    border-color: #ff0055;
+    color: #ff0055;
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
+}
+
+.cyber-button.danger:hover {
+    background-color: #ff0055;
+    color: #000;
+    box-shadow: 0 0 15px #ff0055;
+}
